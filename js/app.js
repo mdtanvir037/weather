@@ -9,13 +9,10 @@ searchBtn.addEventListener('click', function () {
 })
 
 showWeather = weather => {
-    const inputField = document.getElementById('search-field').value;
     const container = document.getElementById('container')
     const temperature = ((weather.main.temp ) - 273.15)
     container.textContent = ''
     const div = document.createElement('div')
-    // const temp = weather.main.temp - 273.15;
-    // console.log(weather.)
     div.innerHTML = `
         <h3>${weather.name},${weather.sys.country}</h3>
         <h2><span>${Math.round(temperature)}</span>&deg;C | <span>${Math.round(temperature) * 1.8 + 32}</span>&deg;F</h2>
