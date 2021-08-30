@@ -6,6 +6,7 @@ searchBtn.addEventListener('click', function () {
     fetch(url)
         .then(res => res.json())
         .then(data => showWeather(data))
+    .catch(err => alert('Please type a valid city name') )
 })
 
 showWeather = weather => {
